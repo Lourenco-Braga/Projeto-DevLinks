@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: white;
+    --bg-url: url(./imgs/teste.png);
+    --stroke-color: rgba(255,255,255,0.5);
+    --surface-color: rgba(255,255,255,0.1);
+    --surface-color-hover: rgba(255,255,255,0.04);
+    --switch-bg-url: url(./imgs/moon-stars.svg);
+}
+
+.light{
+    --text-color: black;
+    --bg-url: url(./imgs/claro.png);
+    --stroke-color: rgba(0,0,0,0.5);
+    --surface-color: rgba(0,0,0,0.05);
+    --surface-color-hover: rgba(0,0,0,0.02);
+    --switch-bg-url: url(./imgs/sun.svg);
+}
+
+body {
+    background-image: var(--bg-url);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body * {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--text-color);
+}
+
+#container {
+    width: 360px;
+    height: 720px;
+    text-align: center;
+    margin: 56px auto 0px;
+}
+
+.perfil {
+    padding-top: 20px;
+}
+
+.perfil img {
+    width: 112px;
+    border-radius: 50%;
+    border: 2px solid gray;
+}
+
+.perfil p {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.frase p {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 15px 0 0;
+    margin-bottom: 20px;
+}
+
+.switch {
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+}
+
+.switch button {
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.light .switch button {
+    left: initial;
+    right: 0;
+}
+
+.switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+}
+
+.redes ul {
+    list-style: none;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.redes ul a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(4px);
+
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: background-color 0.3s;
+}
+
+.redes ul a:hover {
+    background: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
+}
+
+footer p {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 35px;
+}
+
+
