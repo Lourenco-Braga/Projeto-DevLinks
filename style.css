@@ -35,10 +35,11 @@ body * {
 }
 
 #container {
-    width: 360px;
-    height: 720px;
+    width: 100%;
+    max-width: 588px;
     text-align: center;
     margin: 56px auto 0px;
+    padding: 0 24px;
 }
 
 .perfil {
